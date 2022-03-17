@@ -126,14 +126,7 @@ output application/json
             </on-error-propagate>
         </error-handler>
     </flow>
-    <flow name="get:\products:product-api-config">
-        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
-            <ee:message>
-                <ee:set-payload><![CDATA[%dw 2.0
-output application/json
----
-"1783962"]]></ee:set-payload>
-            </ee:message>
-        </ee:transform>
+    <flow name="FlowRef">
+		<flow-ref doc:name="Flow Reference" doc:id="1b123ea8-23af-4994-96bf-45e37bac7e2e" name="get:\products:product-api-config"/>
     </flow>
 </mule>
